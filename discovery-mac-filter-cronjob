@@ -1,0 +1,5 @@
+# Ensure we don't answer BOOTP for bare metal nodes that are alreaVdy known and 
+# registered with Ironic (they are served by neutron-dhcp-agent).              
+SHELL=/bin/sh                                                                  
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin              
+* * * * * root discovery-mac-filter                                            
