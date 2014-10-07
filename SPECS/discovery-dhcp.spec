@@ -3,10 +3,10 @@ Version:	0.0.1
 Release:	1%{?dist}
 Summary:	Creates a dedicated dnsmasq process for your undercloud, serving only unkown machines that are to go through autodiscovery.
 
-Group:		
+Group:		System Environment/Base
 License:	ASL 2.0
 URL:		http://github.com/agroup/instack-undercloud
-Source0:
+Source0:	
 Source1:	discovery-dhcp-dnsmasq.service	
 Source2:	discovery-mac-filter
 Source3:	discovery-mac-filter-cronjob
@@ -22,8 +22,7 @@ BuildRequires:	dnsmasq-utils
 
 
 %prep
-%setup -q -n %{full_release}
-<
+%autosetup
 
 %build
 %configure
